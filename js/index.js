@@ -24,10 +24,9 @@ $(document).ready(function () {
       if(lista[i].fecha >= fecha)
       futuros.push(lista[i])
     }
-    console.log(futuros); 
-    console.log(pasados);
+  
     mostrarEventos(futuros,'proximosEventos');
-    mostrarEventos(pasados,'eventosPasados');
+    mostrarEventos(pasados,'pasadosEventos');
   
 
   }
@@ -48,13 +47,14 @@ $(document).ready(function () {
 
     for(let i = 0; i < 2; i++){
       var str = '<div class="flex-child white">'
-      str += '<p> ID: '+ eventos[i].id + '</p>'+
-      '<p> Nombre: '+ eventos[i].nombre + '</p>'+
-      '<p> Fecha: '+ eventos[i].fecha + '</p>'+
-      '<p> Descripcion: '+ eventos[i].descripcion + '</p>'+
-      '<p> Lugar: '+ eventos[i].lugar + '</p>'+
-      '<p> Invitados: '+ eventos[i].invitados + '</p>'+
-      '<p> Precio: '+ eventos[i].precio + '</p>'+ '</div>'
+      // str += '<> ID: '+ eventos[i].id + '</p>'+
+
+      str += '<a href ="detalle.html?id='+ eventos[i].id +'" style="font-size: 20px; text-decoration: underline">'+ eventos[i].nombre + '</a>'+
+      '<p style="color:#D8D8D8">'+ eventos[i].fecha +' - ' + eventos[i].lugar +'</p>' +
+      '<p>'+ eventos[i].descripcion + '</p>'+
+      // '<p> Lugar: ' + '</p>'+
+      // '<p> Invitados: '+ eventos[i].invitados + '</p>'+
+      '<p style="color:#00CCFF"> Precio: '+ eventos[i].precio + '</p>'+ '</div>'
       $('#'+nombreDiv).append(str)
     }
     

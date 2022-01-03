@@ -41,11 +41,70 @@ label {
     flex: 1;
     border: 2px solid white;
     background-color: white;
+    border-radius: 15px;
 }  
 
 .flex-child:first-child {
     margin-right: 20px;
 } 
+#eventosPasados {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+
+}
+
+#eventosPasados .flex-child {
+    flex: 1;
+    border: 2px solid white;
+    background-color: white;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+}
+
+#eventosFuturos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+}
+
+#eventosFuturos .flex-child{
+    flex: 1;
+    border: 2px solid white;
+    background-color: white;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+#evento {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
+}
 
 
 
