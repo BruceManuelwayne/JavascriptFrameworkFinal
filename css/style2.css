@@ -34,6 +34,11 @@ label {
 /* event container index */
 .flex-container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
  
 }
 
@@ -41,11 +46,15 @@ label {
     flex: 1;
     border: 2px solid white;
     background-color: white;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    margin-bottom: 20px;
 }  
 
-.flex-child:first-child {
-    margin-right: 20px;
-} 
+
 
 
 

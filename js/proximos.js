@@ -43,11 +43,11 @@ $(document).ready(function () {
 
     for(let i = 0; i < eventos.length; i++){
       var str = '<div class="flex-child white">'
-      str += '<p> ID:'+ eventos[i].id + '</p>'+
+      str += '<p> ID: '+ eventos[i].id + '</p>'+
       '<p> Nombre: '+ eventos[i].nombre + '</p>'+
       '<p> Fecha: '+ eventos[i].fecha + '</p>'+
       '<p> Descripcion: '+ eventos[i].descripcion + '</p>'+
-      '<p> Lugar :'+ eventos[i].lugar + '</p>'+
+      '<p> Lugar: '+ eventos[i].lugar + '</p>'+
       '<p> Invitados: '+ eventos[i].invitados + '</p>'+
       '<p> Precio: '+ eventos[i].precio + '</p>'+ '</div>'
       $('#'+nombreDiv).append(str)
