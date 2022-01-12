@@ -1,41 +1,67 @@
-// Hemos omitido los acentos en los comentarios por compatibilidad
+var error = false; 
 
 function validar(formulario) {
 
-  if (formulario.nombre.value.trim().length == 0) {
-    alert("Nombre obligatorio");
-    return false;
-  }
+    if (formulario.nombre.value.trim().length == 0) {
+     
+      document.getElementById('errornombres').innerHTML="Por favor ingrese un nombre valido"; 
+      error = true; 
 
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (!re.test(formulario.email.value)) {
-    alert("Email inválido");
-    return false;
-  }
+    }else{
+      document.getElementById('errornombres').innerHTML="";  
+    }
 
-  if (formulario.contrasena.value.trim().length == 0) {
-    alert("Contraseña obligatorio");
-    return false;
-  }
+    if (formulario.email.value.trim().length == 0) {
+     
+      document.getElementById('errorEmail').innerHTML="Campo invalido"; 
 
-  if (formulario.contrasena.value != formulario.confirmacion.value) {
-    alert("Confirmación no coincide");
-    return false;
-  }
-  if (formulario.genero.value == "") {
-    alert("Género es obligatorio");
-    return false;
-  }
+      error = true; 
+    }else{
+      document.getElementById('errorEmail').innerHTML=""; 
 
-  if (formulario.pais.value == "") {
-    alert("País es obligatorio");
-    return false;
-  }
+    }
+    
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(formulario.email.value)) {
+      document.getElementById('errorEmail').innerHTML="Campo invalido"; 
+      error = true; 
+    }else{
+      document.getElementById('errorEmail').innerHTML=""; 
+    }
+  
+    if (formulario.contrasena.value.trim().length == 0) {
+      document.getElementById('errorContrasena').innerHTML="Contraseña obligatorio"; 
+      error = true; 
+    }else{
+      document.getElementById('errorContrasena').innerHTML="";
+    }
+  
+    if (formulario.contrasena.value != formulario.confirmacion.value) {
+       document.getElementById('errorConfirmacion').innerHTML="Contraseña no coincide"; 
+        error = true; 
+    }else{
+      document.getElementById('errorConfirmacion').innerHTML=""; 
+    }
 
-  if (!formulario.terminos.checked) {
-    alert("Debe aceptar los términos y condiciones");
-    return false;
-  }
+    if (formulario.tipo.value== "-1") {
+    
+      document.getElementById('errorTipo').innerHTML="tipo de usuario es obligatorio";
+      error = true; 
+    }else{
+      document.getElementById('errorTipo').innerHTML="";
+    }
 
-  return false;
+    if (!formulario.acepto.checked) {
+
+      document.getElementById('errorAcepto').innerHTML="Debe aceptar los terminos y condiciones"; 
+      error = true; 
+    }else{
+      document.getElementById('errorAcepto').innerHTML=""; 
+    }
+    if (error == true){
+      return false
+    }else {
+      return true
+    }
 }
+  

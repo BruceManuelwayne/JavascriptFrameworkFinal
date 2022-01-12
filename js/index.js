@@ -49,7 +49,7 @@ $(document).ready(function () {
       var str = '<div class="flex-child white">'
       // str += '<> ID: '+ eventos[i].id + '</p>'+
 
-      str += '<a href ="detalle.html?id='+ eventos[i].id +'" style="font-size: 20px; text-decoration: underline">'+ eventos[i].nombre + '</a>'+
+      str += '<a href ="detalle.html?id='+ eventos[i].id +'" style="font-size: 30px; text-decoration: underline">'+ eventos[i].nombre + '</a>'+
       '<p style="color:#D8D8D8">'+ eventos[i].fecha +' - ' + eventos[i].lugar +'</p>' +
       '<p>'+ eventos[i].descripcion + '</p>'+
       // '<p> Lugar: ' + '</p>'+

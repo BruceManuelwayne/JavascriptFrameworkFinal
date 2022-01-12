@@ -42,6 +42,7 @@ label {
     border: 2px solid white;
     background-color: white;
     border-radius: 15px;
+    padding: 10px;
 }  
 
 .flex-child:first-child {
@@ -69,6 +70,7 @@ label {
     align-self: auto;
     margin-bottom: 20px;
     border-radius: 15px;
+    padding: 10px;
 
 }
 
@@ -92,6 +94,7 @@ label {
     align-self: auto;
     margin-bottom: 20px;
     border-radius: 15px;
+    padding: 10px;
 }
 
 #evento {
@@ -104,6 +107,7 @@ label {
     border: 2px solid white;
     background-color: white;
     border-radius: 15px;
+    padding: 10px;
 }
 
 
